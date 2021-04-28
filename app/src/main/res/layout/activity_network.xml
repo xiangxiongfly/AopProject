@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".NetworkActivity">
 
     <Button
+        android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="gotoClickActivity"
-        android:text="限制快速点击" />
+        android:text="检查网络 提示" />
 
     <Button
+        android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="gotoNetworkActivity"
-        android:text="检查网络" />
+        android:text="检查网络 弹窗" />
 
 </LinearLayout>

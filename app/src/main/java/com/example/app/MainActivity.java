@@ -21,4 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public void gotoClickActivity(View view) {
         startActivity(new Intent(context, ClickActivity.class));
     }
+
+    public void gotoNetworkActivity(View view) {
+        startActivity(new Intent(context, NetworkActivity.class));
+    }
 }
