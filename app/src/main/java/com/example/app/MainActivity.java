@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         User user = new User();
         user.eat();
-        user.run();
+        user.run("hello");
     }
 
     public void gotoClickActivity(View view) {

@@ -6,7 +6,6 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.aspectj.lang.reflect.CodeSignature;
 import org.aspectj.lang.reflect.MethodSignature;
 
 @Aspect
@@ -15,10 +14,10 @@ public class SingleClickAspect {
     private String lastTag;
 
     @Pointcut("execution(@com.example.mylibrary.click.SingleClick * *(..))")
-    public void method() {
+    public void singleClickMethod() {
     }
 
-    @Around("method() && @annotation(singleClick)")
+    @Around("singleClickMethod() && @annotation(singleClick)")
     public void aroundJoinPoint(ProceedingJoinPoint joinPoint, SingleClick singleClick) throws Throwable {
         //获取被注解方法的签名
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();

@@ -23,10 +23,10 @@ import org.aspectj.lang.reflect.MethodSignature;
 public class CheckNetAspect {
 
     @Pointcut("execution(@com.example.mylibrary.network.CheckNet * *(..))")
-    public void method() {
+    public void checkNetMethod() {
     }
 
-    @Around("method()")
+    @Around("checkNetMethod()")
     public void handleCheckNet(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         CheckNet checkNet = methodSignature.getMethod().getAnnotation(CheckNet.class);
